@@ -89,4 +89,110 @@ FROM read_files(
   format => 'csv',
   header => true,
   inferSchema => false
-)
+);
+
+-- Location & metadata
+CREATE OR REPLACE TABLE classic_stable_been2c_catalog.weather.station_location
+USING DELTA
+AS SELECT DISTINCT
+  station_code,
+  POSTAL_CODE,
+  COUNTRY_CODE,
+  try_cast(latitude AS DOUBLE)  AS latitude,
+  try_cast(longitude AS DOUBLE) AS longitude
+FROM read_files(
+  '/Volumes/classic_stable_been2c_catalog/weather/files/full_table_us_postal_daily_metric.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => false
+);
+
+-- Measured / observation data
+CREATE OR REPLACE TABLE classic_stable_been2c_catalog.weather.daily_weather_measurement
+USING DELTA
+AS SELECT
+  station_code,
+  try_cast(date AS DATE) AS date,
+  day_flag,
+  forecast_init_datetime,
+  phrase_short,
+  phrase_long,
+  try_cast(phrase_code AS DOUBLE) AS phrase_code,
+  enhanced_phrase_code_short,
+  enhanced_phrase_code_long,
+  try_cast(weather_icon AS DOUBLE) AS weather_icon,
+  try_cast(cloud_cover_avg AS DOUBLE) AS cloud_cover_avg,
+  try_cast(degree_days_cooling AS DOUBLE) AS degree_days_cooling,
+  try_cast(degree_days_effective AS DOUBLE) AS degree_days_effective,
+  try_cast(degree_days_freezing AS DOUBLE) AS degree_days_freezing,
+  try_cast(degree_days_growing AS DOUBLE) AS degree_days_growing,
+  try_cast(degree_days_heating AS DOUBLE) AS degree_days_heating,
+  try_cast(evapotranspiration_lwe_total AS DOUBLE) AS evapotranspiration_lwe_total,
+  try_cast(humidity_relative_avg AS DOUBLE) AS humidity_relative_avg,
+  try_cast(humidity_relative_max AS DOUBLE) AS humidity_relative_max,
+  try_cast(humidity_relative_min AS DOUBLE) AS humidity_relative_min,
+  has_ice,
+  try_cast(ice_lwe_total AS DOUBLE) AS ice_lwe_total,
+  try_cast(ice_probability AS DOUBLE) AS ice_probability,
+  try_cast(index_uv_avg AS DOUBLE) AS index_uv_avg,
+  try_cast(minutes_of_ice_total AS DOUBLE) AS minutes_of_ice_total,
+  try_cast(minutes_of_precipitation_total AS DOUBLE) AS minutes_of_precipitation_total,
+  try_cast(minutes_of_rain_total AS DOUBLE) AS minutes_of_rain_total,
+  try_cast(minutes_of_snow_total AS DOUBLE) AS minutes_of_snow_total,
+  try_cast(minutes_of_sun_total AS DOUBLE) AS minutes_of_sun_total,
+  has_precipitation,
+  try_cast(precipitation_lwe_total AS DOUBLE) AS precipitation_lwe_total,
+  try_cast(precipitation_intensity_max AS DOUBLE) AS precipitation_intensity_max,
+  try_cast(precipitation_probability AS DOUBLE) AS precipitation_probability,
+  precipitation_type_desc_predominant,
+  has_rain,
+  try_cast(rain_lwe_total AS DOUBLE) AS rain_lwe_total,
+  try_cast(rain_probability AS DOUBLE) AS rain_probability,
+  has_snow,
+  try_cast(snow_total AS DOUBLE) AS snow_total,
+  try_cast(snow_lwe_total AS DOUBLE) AS snow_lwe_total,
+  try_cast(snow_liquid_ratio_accuweather_avg AS DOUBLE) AS snow_liquid_ratio_accuweather_avg,
+  try_cast(snow_probability AS DOUBLE) AS snow_probability,
+  try_cast(snow_drifting_intensity_max AS DOUBLE) AS snow_drifting_intensity_max,
+  snow_type_desc_predominant,
+  try_cast(solar_irradiance_total AS DOUBLE) AS solar_irradiance_total,
+  try_cast(temperature_avg AS DOUBLE) AS temperature_avg,
+  try_cast(temperature_max AS DOUBLE) AS temperature_max,
+  try_cast(temperature_min AS DOUBLE) AS temperature_min,
+  try_cast(temperature_dew_point_avg AS DOUBLE) AS temperature_dew_point_avg,
+  try_cast(temperature_dew_point_max AS DOUBLE) AS temperature_dew_point_max,
+  try_cast(temperature_dew_point_min AS DOUBLE) AS temperature_dew_point_min,
+  try_cast(temperature_heat_index_avg AS DOUBLE) AS temperature_heat_index_avg,
+  try_cast(temperature_heat_index_max AS DOUBLE) AS temperature_heat_index_max,
+  try_cast(temperature_heat_index_min AS DOUBLE) AS temperature_heat_index_min,
+  try_cast(temperature_realfeel_avg AS DOUBLE) AS temperature_realfeel_avg,
+  try_cast(temperature_realfeel_max AS DOUBLE) AS temperature_realfeel_max,
+  try_cast(temperature_realfeel_min AS DOUBLE) AS temperature_realfeel_min,
+  try_cast(temperature_realfeel_shade_avg AS DOUBLE) AS temperature_realfeel_shade_avg,
+  try_cast(temperature_realfeel_shade_max AS DOUBLE) AS temperature_realfeel_shade_max,
+  try_cast(temperature_realfeel_shade_min AS DOUBLE) AS temperature_realfeel_shade_min,
+  try_cast(temperature_wetbulb_avg AS DOUBLE) AS temperature_wetbulb_avg,
+  try_cast(temperature_wetbulb_max AS DOUBLE) AS temperature_wetbulb_max,
+  try_cast(temperature_wetbulb_min AS DOUBLE) AS temperature_wetbulb_min,
+  try_cast(temperature_wetbulb_globe_avg AS DOUBLE) AS temperature_wetbulb_globe_avg,
+  try_cast(temperature_wetbulb_globe_max AS DOUBLE) AS temperature_wetbulb_globe_max,
+  try_cast(temperature_wetbulb_globe_min AS DOUBLE) AS temperature_wetbulb_globe_min,
+  try_cast(temperature_wind_chill_avg AS DOUBLE) AS temperature_wind_chill_avg,
+  try_cast(temperature_wind_chill_max AS DOUBLE) AS temperature_wind_chill_max,
+  try_cast(temperature_wind_chill_min AS DOUBLE) AS temperature_wind_chill_min,
+  try_cast(thunderstorm_probability AS DOUBLE) AS thunderstorm_probability,
+  try_cast(wind_direction_avg AS DOUBLE) AS wind_direction_avg,
+  try_cast(wind_direction_predominant AS DOUBLE) AS wind_direction_predominant,
+  try_cast(wind_gust_direction_avg AS DOUBLE) AS wind_gust_direction_avg,
+  try_cast(wind_gust_avg AS DOUBLE) AS wind_gust_avg,
+  try_cast(wind_gust_max AS DOUBLE) AS wind_gust_max,
+  try_cast(wind_gust_min AS DOUBLE) AS wind_gust_min,
+  try_cast(wind_speed_avg AS DOUBLE) AS wind_speed_avg,
+  try_cast(wind_speed_max AS DOUBLE) AS wind_speed_max,
+  try_cast(wind_speed_min AS DOUBLE) AS wind_speed_min
+FROM read_files(
+  '/Volumes/classic_stable_been2c_catalog/weather/files/full_table_us_postal_daily_metric.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => false
+);
