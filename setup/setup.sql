@@ -91,6 +91,49 @@ FROM read_files(
   inferSchema => false
 );
 
+-- Delivery schedule for logistics / weather-risk analysis
+CREATE OR REPLACE TABLE classic_stable_been2c_catalog.weather.delivery_schedule
+USING DELTA
+AS SELECT
+  delivery_id,
+  origin_postal_code,
+  destination_postal_code,
+  try_cast(ship_date AS DATE) AS ship_date,
+  try_cast(expected_delivery_date AS DATE) AS expected_delivery_date,
+  try_cast(nullif(actual_delivery_date, '') AS DATE) AS actual_delivery_date,
+  package_type,
+  try_cast(weight_kg AS DOUBLE) AS weight_kg,
+  priority,
+  status,
+  carrier,
+  customer_name
+FROM read_files(
+  '/Volumes/classic_stable_been2c_catalog/weather/files/delivery_schedule.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => false
+);
+
+-- Package-type weather sensitivity thresholds
+CREATE OR REPLACE TABLE classic_stable_been2c_catalog.weather.package_weather_sensitivity
+USING DELTA
+AS SELECT
+  package_type,
+  try_cast(max_temperature AS DOUBLE) AS max_temperature,
+  try_cast(min_temperature AS DOUBLE) AS min_temperature,
+  try_cast(max_wind_gust AS DOUBLE) AS max_wind_gust,
+  try_cast(max_precipitation_probability AS DOUBLE) AS max_precipitation_probability,
+  try_cast(max_snow_probability AS DOUBLE) AS max_snow_probability,
+  try_cast(max_ice_probability AS DOUBLE) AS max_ice_probability,
+  try_cast(humidity_relative_max AS DOUBLE) AS humidity_relative_max,
+  sensitivity_notes
+FROM read_files(
+  '/Volumes/classic_stable_been2c_catalog/weather/files/package_weather_sensitivity.csv',
+  format => 'csv',
+  header => true,
+  inferSchema => false
+);
+
 -- Location & metadata
 CREATE OR REPLACE TABLE classic_stable_been2c_catalog.weather.station_location
 USING DELTA

@@ -1,0 +1,301 @@
+delivery_id,origin_postal_code,destination_postal_code,ship_date,expected_delivery_date,actual_delivery_date,package_type,weight_kg,priority,status,carrier,customer_name
+DEL-00001,90001,03101,2023-05-14,2023-05-21,2023-05-21,perishable,88.5,standard,delivered,UPS,MegaMart Supply
+DEL-00002,19103,02101,2023-05-16,2023-05-23,,perishable,67.6,standard,in_transit,Amazon Logistics,Greenfield Organics
+DEL-00003,68102,88001,2023-04-18,2023-04-19,2023-04-19,electronics,51.0,overnight,delivered,UPS,ByteStream Hardware
+DEL-00004,01201,07102,2023-04-03,2023-04-09,,fragile,32.1,standard,in_transit,USPS,Studio Lumiere
+DEL-00005,43215,07102,2023-05-07,2023-05-09,,standard,103.5,express,scheduled,Amazon Logistics,SecureShip Hazmat
+DEL-00006,19103,89101,2023-04-07,2023-04-13,2023-04-12,electronics,28.3,standard,delivered,FedEx,Allied Chemical Corp
+DEL-00007,63101,33101,2023-05-12,2023-05-15,,fragile,112.4,standard,in_transit,USPS,ByteStream Hardware
+DEL-00008,33101,82001,2023-05-11,2023-05-18,2023-05-18,frozen,118.7,standard,delivered,DHL Express,SafeHaul Logistics
+DEL-00009,93101,06103,2023-04-14,2023-04-21,2023-04-24,electronics,32.5,standard,delayed,USPS,CircuitPeak Electronics
+DEL-00010,37201,98101,2023-04-16,2023-04-17,,standard,32.2,overnight,scheduled,DHL Express,MegaMart Supply
+DEL-00011,44113,88001,2023-05-19,2023-05-22,2023-05-24,fragile,59.5,standard,delayed,UPS,Evergreen Gardens
+DEL-00012,90001,33101,2023-04-30,2023-05-07,2023-05-08,live_plants,46.1,standard,delivered,FedEx,CircuitPeak Electronics
+DEL-00013,10001,92101,2023-05-12,2023-05-15,2023-05-15,frozen,32.4,express,delivered,Amazon Logistics,National Supply Co
+DEL-00014,33101,80202,2023-05-03,2023-05-05,2023-05-08,perishable,91.6,express,delayed,USPS,Evergreen Gardens
+DEL-00015,90001,85001,2023-05-30,2023-06-06,2023-06-11,standard,114.4,standard,delayed,UPS,Precision Chemicals
+DEL-00016,60601,85001,2023-05-27,2023-05-28,2023-05-28,perishable,7.4,overnight,delivered,USPS,ChemCore Solutions
+DEL-00017,21201,93101,2023-05-04,2023-05-11,,standard,20.2,standard,in_transit,DHL Express,Precision Chemicals
+DEL-00018,37201,82001,2023-05-12,2023-05-15,,frozen,119.4,express,in_transit,USPS,CircuitPeak Electronics
+DEL-00019,87101,68102,2023-04-15,2023-04-22,2023-04-22,pharmaceutical,70.8,standard,delivered,USPS,Greenfield Organics
+DEL-00020,95814,90001,2023-05-03,2023-05-07,2023-05-07,perishable,40.0,standard,delivered,FedEx,Allied Chemical Corp
+DEL-00021,37201,82001,2023-05-21,2023-05-22,,pharmaceutical,57.0,overnight,scheduled,Amazon Logistics,HazSafe Transport
+DEL-00022,28202,01201,2023-05-17,2023-05-20,,perishable,56.3,standard,scheduled,DHL Express,Crystal Clear Imports
+DEL-00023,94102,01201,2023-05-05,2023-05-08,2023-05-08,perishable,23.4,express,delivered,FedEx,ChemCore Solutions
+DEL-00024,35203,80202,2023-05-06,2023-05-07,2023-05-08,electronics,103.4,overnight,delivered,DHL Express,Glacier Cold Chain
+DEL-00025,10001,01201,2023-04-14,2023-04-17,2023-04-19,hazmat,58.5,express,delayed,UPS,Crystal Clear Imports
+DEL-00026,43215,10001,2023-05-17,2023-05-24,,artwork,51.0,standard,scheduled,DHL Express,Gallery Moderne
+DEL-00027,84101,12207,2023-04-04,2023-04-09,2023-04-10,pharmaceutical,88.4,standard,delivered,FedEx,HazSafe Transport
+DEL-00028,80202,87101,2023-04-12,2023-04-15,,hazmat,10.1,standard,in_transit,FedEx,Evergreen Gardens
+DEL-00029,89101,23219,2023-04-03,2023-04-04,,fragile,69.7,overnight,in_transit,Amazon Logistics,ChemCore Solutions
+DEL-00030,97201,83702,2023-04-16,2023-04-17,2023-04-16,standard,86.1,overnight,delivered,UPS,NovaRx Distribution
+DEL-00031,94102,27601,2023-05-07,2023-05-08,2023-05-08,standard,55.3,overnight,delivered,FedEx,Greenfield Organics
+DEL-00032,85001,29401,2023-04-19,2023-04-23,,pharmaceutical,29.7,standard,in_transit,FedEx,SecureShip Hazmat
+DEL-00033,59601,96813,2023-05-06,2023-05-07,2023-05-08,electronics,80.3,overnight,delayed,Amazon Logistics,Greenfield Organics
+DEL-00034,04101,35203,2023-05-09,2023-05-13,,perishable,33.0,standard,scheduled,Amazon Logistics,MegaMart Supply
+DEL-00035,37201,92101,2023-05-25,2023-05-28,2023-05-28,standard,108.7,standard,delivered,DHL Express,SafeHaul Logistics
+DEL-00036,35203,19103,2023-05-06,2023-05-09,,perishable,89.1,express,in_transit,USPS,FrostBite Foods
+DEL-00037,03101,21201,2023-04-24,2023-04-26,,artwork,4.8,express,in_transit,UPS,Precision Chemicals
+DEL-00038,19103,60601,2023-05-14,2023-05-15,,fragile,43.3,overnight,scheduled,FedEx,SecureShip Hazmat
+DEL-00039,55401,83702,2023-05-30,2023-06-03,2023-06-05,hazmat,19.0,standard,delayed,Amazon Logistics,Delicate Touches
+DEL-00040,53202,02101,2023-05-18,2023-05-19,2023-05-18,pharmaceutical,80.6,overnight,delivered,DHL Express,Glacier Cold Chain
+DEL-00041,01201,46204,2023-04-30,2023-05-01,2023-05-01,chemical,98.1,overnight,delivered,UPS,Bloom & Grow Nursery
+DEL-00042,32801,02101,2023-05-20,2023-05-25,2023-05-26,standard,8.8,standard,delivered,USPS,Allied Chemical Corp
+DEL-00043,46204,92101,2023-04-17,2023-04-21,,artwork,105.3,standard,in_transit,FedEx,Artisan Glass Co
+DEL-00044,29401,19103,2023-05-03,2023-05-06,2023-05-07,perishable,72.9,standard,delivered,USPS,Crystal Clear Imports
+DEL-00045,28202,35203,2023-05-14,2023-05-18,2023-05-18,perishable,96.9,standard,delivered,Amazon Logistics,Heritage Art Movers
+DEL-00046,98101,48201,2023-05-03,2023-05-06,,standard,108.1,express,scheduled,FedEx,Delicate Touches
+DEL-00047,60601,53202,2023-04-25,2023-04-27,,frozen,80.0,express,in_transit,UPS,Crystal Clear Imports
+DEL-00048,27601,53202,2023-05-08,2023-05-15,,standard,51.9,standard,scheduled,USPS,Bloom & Grow Nursery
+DEL-00049,50309,68102,2023-05-21,2023-05-25,,standard,108.2,standard,scheduled,DHL Express,Glacier Cold Chain
+DEL-00050,70112,87101,2023-04-16,2023-04-19,2023-04-19,standard,114.3,express,delivered,FedEx,Botanica Direct
+DEL-00051,12207,02101,2023-04-30,2023-05-01,2023-05-06,perishable,92.3,overnight,delayed,Amazon Logistics,Allied Chemical Corp
+DEL-00052,28202,96813,2023-04-01,2023-04-04,,frozen,78.9,standard,scheduled,UPS,MegaMart Supply
+DEL-00053,32801,30301,2023-05-29,2023-05-31,,live_plants,67.1,express,in_transit,DHL Express,Pinnacle Pharma
+DEL-00054,50309,89101,2023-05-10,2023-05-13,,standard,107.0,express,scheduled,USPS,National Supply Co
+DEL-00055,82001,68102,2023-04-16,2023-04-19,,hazmat,31.5,express,scheduled,DHL Express,BulkBuy Wholesale
+DEL-00056,87101,84101,2023-04-18,2023-04-23,2023-04-24,standard,34.6,standard,delivered,FedEx,ByteStream Hardware
+DEL-00057,07102,12207,2023-04-27,2023-05-03,2023-05-03,pharmaceutical,26.1,standard,delivered,UPS,ByteStream Hardware
+DEL-00058,53202,06103,2023-05-27,2023-06-03,2023-06-03,electronics,2.8,standard,delivered,Amazon Logistics,ByteStream Hardware
+DEL-00059,55401,27601,2023-05-05,2023-05-06,,frozen,89.8,overnight,in_transit,DHL Express,Precision Chemicals
+DEL-00060,35203,68102,2023-04-30,2023-05-04,,standard,20.2,standard,cancelled,DHL Express,Delicate Touches
+DEL-00061,59601,02101,2023-04-09,2023-04-12,2023-04-12,hazmat,77.3,express,delivered,FedEx,TechVault Inc
+DEL-00062,43215,60601,2023-05-24,2023-05-30,2023-05-30,electronics,90.4,standard,delivered,DHL Express,SafeHaul Logistics
+DEL-00063,80202,02101,2023-05-20,2023-05-23,,frozen,78.2,standard,scheduled,USPS,ChemCore Solutions
+DEL-00064,23219,28202,2023-04-08,2023-04-10,,chemical,57.1,express,in_transit,UPS,MegaMart Supply
+DEL-00065,29401,43215,2023-04-20,2023-04-22,,pharmaceutical,98.4,express,in_transit,FedEx,National Supply Co
+DEL-00066,27601,97201,2023-05-08,2023-05-09,2023-05-09,standard,24.2,overnight,delivered,DHL Express,ByteStream Hardware
+DEL-00067,89101,88001,2023-05-05,2023-05-08,,live_plants,5.4,express,scheduled,Amazon Logistics,Glacier Cold Chain
+DEL-00068,21201,87101,2023-04-28,2023-05-03,,standard,59.1,standard,in_transit,DHL Express,Botanica Direct
+DEL-00069,50309,96813,2023-05-22,2023-05-29,,pharmaceutical,32.8,standard,scheduled,Amazon Logistics,Pacific Fresh
+DEL-00070,50309,44113,2023-05-30,2023-06-01,2023-06-01,chemical,29.8,express,delivered,USPS,Allied Chemical Corp
+DEL-00071,23219,93101,2023-05-25,2023-05-28,2023-05-28,standard,3.9,express,delivered,DHL Express,FreshDirect Farms
+DEL-00072,55401,29401,2023-05-31,2023-06-01,2023-05-31,electronics,1.7,overnight,delivered,USPS,Precision Chemicals
+DEL-00073,53202,85001,2023-04-29,2023-05-02,2023-05-02,standard,85.6,standard,delivered,DHL Express,Pacific Fresh
+DEL-00074,46204,95814,2023-04-23,2023-04-26,,electronics,66.6,express,cancelled,USPS,SubZero Provisions
+DEL-00075,82001,48201,2023-05-17,2023-05-21,2023-05-20,fragile,28.0,standard,delivered,USPS,SafeHaul Logistics
+DEL-00076,59601,93101,2023-05-19,2023-05-26,,frozen,87.1,standard,in_transit,DHL Express,SafeHaul Logistics
+DEL-00077,01201,37201,2023-04-09,2023-04-14,2023-04-14,electronics,85.1,standard,delivered,USPS,Greenfield Organics
+DEL-00078,82001,70112,2023-05-07,2023-05-12,,frozen,104.8,standard,in_transit,DHL Express,Artisan Glass Co
+DEL-00079,68102,48201,2023-04-26,2023-05-02,2023-05-01,pharmaceutical,98.7,standard,delivered,DHL Express,Artisan Glass Co
+DEL-00080,89101,06103,2023-04-08,2023-04-11,,pharmaceutical,119.3,express,in_transit,USPS,TechVault Inc
+DEL-00081,81501,32801,2023-04-28,2023-05-03,,live_plants,103.3,standard,in_transit,DHL Express,Gallery Moderne
+DEL-00082,06103,90001,2023-05-13,2023-05-16,2023-05-16,artwork,25.7,standard,delivered,UPS,Pacific Fresh
+DEL-00083,82001,21201,2023-04-15,2023-04-20,,pharmaceutical,35.3,standard,scheduled,Amazon Logistics,SubZero Provisions
+DEL-00084,92101,50309,2023-05-08,2023-05-12,,perishable,95.1,standard,in_transit,USPS,Glacier Cold Chain
+DEL-00085,59601,32801,2023-05-21,2023-05-22,,standard,7.6,overnight,in_transit,UPS,TechVault Inc
+DEL-00086,83702,70112,2023-04-18,2023-04-25,,standard,48.6,standard,in_transit,USPS,ByteStream Hardware
+DEL-00087,68102,07102,2023-04-06,2023-04-07,,standard,30.4,overnight,cancelled,USPS,Studio Lumiere
+DEL-00088,83702,88001,2023-05-19,2023-05-20,,artwork,5.3,overnight,in_transit,USPS,HazSafe Transport
+DEL-00089,94102,68102,2023-05-02,2023-05-05,,hazmat,76.4,standard,in_transit,Amazon Logistics,Crystal Clear Imports
+DEL-00090,53202,48201,2023-05-02,2023-05-07,,electronics,49.7,standard,scheduled,UPS,FreshDirect Farms
+DEL-00091,46204,93101,2023-05-20,2023-05-26,2023-05-27,standard,39.1,standard,delayed,USPS,SafeHaul Logistics
+DEL-00092,98101,59601,2023-05-02,2023-05-08,,standard,74.9,standard,scheduled,Amazon Logistics,MediQuick Labs
+DEL-00093,37201,70112,2023-04-08,2023-04-09,,standard,83.9,overnight,cancelled,DHL Express,SecureShip Hazmat
+DEL-00094,88001,23219,2023-04-15,2023-04-18,,frozen,49.3,standard,in_transit,FedEx,Precision Chemicals
+DEL-00095,03101,98101,2023-04-27,2023-05-03,,chemical,84.8,standard,cancelled,USPS,Evergreen Gardens
+DEL-00096,23219,80202,2023-04-09,2023-04-12,2023-04-12,standard,89.7,standard,delivered,Amazon Logistics,Evergreen Gardens
+DEL-00097,48201,87101,2023-05-13,2023-05-19,2023-05-23,electronics,70.6,standard,delayed,USPS,Botanica Direct
+DEL-00098,59601,80202,2023-04-21,2023-04-23,,electronics,54.9,express,cancelled,Amazon Logistics,CircuitPeak Electronics
+DEL-00099,23219,97201,2023-05-01,2023-05-02,2023-05-01,fragile,38.5,overnight,delivered,DHL Express,Pinnacle Pharma
+DEL-00100,94102,12207,2023-04-07,2023-04-13,2023-04-13,standard,40.2,standard,delivered,Amazon Logistics,HazSafe Transport
+DEL-00101,10001,99501,2023-04-17,2023-04-18,,pharmaceutical,56.6,overnight,in_transit,UPS,TechVault Inc
+DEL-00102,46204,98101,2023-05-11,2023-05-17,2023-05-18,perishable,114.5,standard,delayed,Amazon Logistics,CircuitPeak Electronics
+DEL-00103,81501,21201,2023-04-28,2023-04-30,,electronics,89.7,express,scheduled,USPS,ChemCore Solutions
+DEL-00104,95814,01201,2023-04-04,2023-04-07,2023-04-07,standard,39.3,express,delivered,FedEx,Pinnacle Pharma
+DEL-00105,12207,29401,2023-05-10,2023-05-13,,standard,21.4,express,in_transit,UPS,FrostBite Foods
+DEL-00106,23219,85001,2023-04-17,2023-04-20,2023-04-24,hazmat,30.9,standard,delayed,DHL Express,Pacific Fresh
+DEL-00107,70112,92101,2023-04-28,2023-05-03,,standard,36.2,standard,in_transit,USPS,HazSafe Transport
+DEL-00108,27601,28202,2023-04-23,2023-04-24,,artwork,46.1,overnight,cancelled,FedEx,ChemCore Solutions
+DEL-00109,70112,02101,2023-05-14,2023-05-16,2023-05-20,artwork,68.1,express,delayed,USPS,Greenfield Organics
+DEL-00110,70112,32801,2023-05-19,2023-05-23,,standard,30.4,standard,in_transit,UPS,Studio Lumiere
+DEL-00111,90001,98101,2023-04-09,2023-04-11,2023-04-14,perishable,44.1,express,delayed,FedEx,HazSafe Transport
+DEL-00112,99501,53202,2023-05-04,2023-05-11,2023-05-13,pharmaceutical,116.6,standard,delayed,Amazon Logistics,SecureShip Hazmat
+DEL-00113,29401,84101,2023-04-05,2023-04-09,,artwork,14.3,standard,scheduled,USPS,Glacier Cold Chain
+DEL-00114,32801,92101,2023-04-26,2023-04-27,2023-04-27,frozen,11.3,overnight,delivered,Amazon Logistics,MediQuick Labs
+DEL-00115,50309,63101,2023-05-31,2023-06-03,2023-06-03,standard,98.8,express,delivered,Amazon Logistics,CircuitPeak Electronics
+DEL-00116,80202,02101,2023-05-12,2023-05-13,,standard,73.4,overnight,in_transit,USPS,Heritage Art Movers
+DEL-00117,50309,95814,2023-04-20,2023-04-26,2023-04-26,electronics,113.6,standard,delivered,UPS,Pinnacle Pharma
+DEL-00118,59601,04101,2023-05-17,2023-05-21,2023-05-22,fragile,70.7,standard,delayed,Amazon Logistics,Crystal Clear Imports
+DEL-00119,84101,90001,2023-04-29,2023-04-30,,fragile,44.8,overnight,cancelled,FedEx,ByteStream Hardware
+DEL-00120,63101,01201,2023-04-13,2023-04-16,2023-04-20,artwork,48.1,standard,delayed,USPS,Pinnacle Pharma
+DEL-00121,07102,89101,2023-04-16,2023-04-18,,electronics,94.5,express,scheduled,FedEx,Pinnacle Pharma
+DEL-00122,37201,21201,2023-04-15,2023-04-18,,chemical,97.7,express,scheduled,Amazon Logistics,Bloom & Grow Nursery
+DEL-00123,88001,10001,2023-04-12,2023-04-13,,electronics,30.5,overnight,scheduled,UPS,Precision Chemicals
+DEL-00124,02101,12207,2023-04-12,2023-04-15,2023-04-14,perishable,39.2,express,delivered,UPS,HazSafe Transport
+DEL-00125,53202,59601,2023-05-08,2023-05-11,,perishable,43.8,standard,in_transit,DHL Express,National Supply Co
+DEL-00126,32801,90001,2023-04-02,2023-04-04,,perishable,55.2,express,cancelled,Amazon Logistics,Gallery Moderne
+DEL-00127,46204,68102,2023-04-21,2023-04-28,2023-04-28,frozen,108.0,standard,delivered,DHL Express,TechVault Inc
+DEL-00128,35203,90001,2023-05-04,2023-05-09,,standard,119.4,standard,in_transit,USPS,CircuitPeak Electronics
+DEL-00129,88001,44113,2023-04-28,2023-05-01,2023-05-05,perishable,103.9,express,delayed,Amazon Logistics,Delicate Touches
+DEL-00130,48201,80202,2023-04-17,2023-04-20,,fragile,37.8,express,cancelled,USPS,Crystal Clear Imports
+DEL-00131,89101,80202,2023-05-18,2023-05-21,,perishable,12.0,express,scheduled,FedEx,Crystal Clear Imports
+DEL-00132,82001,06103,2023-04-23,2023-04-26,2023-04-27,standard,15.1,express,delayed,USPS,NovaRx Distribution
+DEL-00133,70112,81501,2023-05-01,2023-05-05,,electronics,19.0,standard,scheduled,Amazon Logistics,Bloom & Grow Nursery
+DEL-00134,55401,83702,2023-05-25,2023-05-27,,fragile,97.0,express,in_transit,Amazon Logistics,ChemCore Solutions
+DEL-00135,98101,95814,2023-04-01,2023-04-05,2023-04-10,electronics,41.1,standard,delayed,USPS,Heritage Art Movers
+DEL-00136,98101,46204,2023-04-14,2023-04-17,,perishable,89.7,express,in_transit,FedEx,TechVault Inc
+DEL-00137,48201,33101,2023-04-04,2023-04-06,2023-04-07,fragile,10.7,express,delivered,Amazon Logistics,Studio Lumiere
+DEL-00138,06103,92101,2023-04-27,2023-05-02,2023-05-03,perishable,73.0,standard,delivered,DHL Express,SubZero Provisions
+DEL-00139,03101,63101,2023-04-20,2023-04-23,2023-04-24,fragile,63.5,standard,delivered,Amazon Logistics,SubZero Provisions
+DEL-00140,06103,10001,2023-04-21,2023-04-22,2023-04-21,electronics,31.0,overnight,delivered,UPS,National Supply Co
+DEL-00141,44113,30301,2023-05-13,2023-05-18,2023-05-17,pharmaceutical,67.3,standard,delivered,UPS,Evergreen Gardens
+DEL-00142,19103,68102,2023-04-26,2023-04-27,2023-04-27,perishable,51.8,overnight,delivered,USPS,HazSafe Transport
+DEL-00143,02101,48201,2023-04-24,2023-04-25,,pharmaceutical,82.9,overnight,in_transit,DHL Express,Botanica Direct
+DEL-00144,01201,29401,2023-05-18,2023-05-23,2023-05-23,standard,104.5,standard,delivered,FedEx,CircuitPeak Electronics
+DEL-00145,21201,87101,2023-04-23,2023-04-27,2023-04-27,standard,93.3,standard,delivered,UPS,SecureShip Hazmat
+DEL-00146,29401,28202,2023-05-11,2023-05-17,,pharmaceutical,114.2,standard,in_transit,FedEx,FrostBite Foods
+DEL-00147,83702,93101,2023-05-10,2023-05-13,2023-05-16,standard,76.4,express,delayed,Amazon Logistics,Pacific Fresh
+DEL-00148,12207,50309,2023-04-04,2023-04-09,,perishable,33.3,standard,in_transit,USPS,Glacier Cold Chain
+DEL-00149,27601,80202,2023-05-25,2023-05-28,,standard,77.5,standard,in_transit,USPS,TechVault Inc
+DEL-00150,85001,43215,2023-05-07,2023-05-09,2023-05-09,standard,109.1,express,delivered,FedEx,BulkBuy Wholesale
+DEL-00151,85001,12207,2023-05-12,2023-05-16,2023-05-15,artwork,10.6,standard,delivered,USPS,ByteStream Hardware
+DEL-00152,68102,50309,2023-04-25,2023-04-28,,standard,110.2,express,scheduled,USPS,MediQuick Labs
+DEL-00153,89101,88001,2023-05-06,2023-05-09,2023-05-08,perishable,39.9,express,delivered,USPS,TechVault Inc
+DEL-00154,98101,88001,2023-04-23,2023-04-28,,chemical,17.4,standard,cancelled,Amazon Logistics,NovaRx Distribution
+DEL-00155,92101,98101,2023-05-12,2023-05-15,,fragile,67.3,express,scheduled,FedEx,Gallery Moderne
+DEL-00156,98101,95814,2023-04-28,2023-05-01,2023-05-01,chemical,77.7,express,delivered,Amazon Logistics,TechVault Inc
+DEL-00157,30301,32801,2023-04-10,2023-04-12,2023-04-12,electronics,120.0,express,delivered,UPS,ChemCore Solutions
+DEL-00158,85001,82001,2023-05-20,2023-05-21,,chemical,40.7,overnight,in_transit,FedEx,NovaRx Distribution
+DEL-00159,12207,30301,2023-05-17,2023-05-20,2023-05-20,pharmaceutical,108.4,express,delivered,Amazon Logistics,Glacier Cold Chain
+DEL-00160,89101,99501,2023-04-29,2023-05-03,,electronics,90.0,standard,in_transit,USPS,National Supply Co
+DEL-00161,27601,84101,2023-04-19,2023-04-25,,hazmat,55.7,standard,in_transit,Amazon Logistics,BulkBuy Wholesale
+DEL-00162,53202,33101,2023-05-12,2023-05-15,2023-05-20,live_plants,30.4,express,delayed,UPS,Allied Chemical Corp
+DEL-00163,01201,96813,2023-04-18,2023-04-19,2023-04-21,chemical,91.7,overnight,delayed,USPS,TechVault Inc
+DEL-00164,44113,07102,2023-04-02,2023-04-08,2023-04-09,artwork,42.3,standard,delivered,DHL Express,SecureShip Hazmat
+DEL-00165,63101,23219,2023-04-07,2023-04-12,,fragile,38.6,standard,scheduled,UPS,Greenfield Organics
+DEL-00166,04101,19103,2023-04-29,2023-05-01,2023-05-02,electronics,84.8,express,delayed,UPS,National Supply Co
+DEL-00167,29401,37201,2023-05-20,2023-05-25,2023-05-25,chemical,51.1,standard,delivered,Amazon Logistics,Evergreen Gardens
+DEL-00168,06103,29401,2023-05-28,2023-05-31,,fragile,13.7,express,in_transit,DHL Express,TechVault Inc
+DEL-00169,02101,94102,2023-05-10,2023-05-15,2023-05-15,standard,51.8,standard,delivered,UPS,Gallery Moderne
+DEL-00170,30301,89101,2023-05-05,2023-05-12,,standard,114.4,standard,scheduled,USPS,TechVault Inc
+DEL-00171,85001,83702,2023-04-24,2023-04-25,,perishable,46.7,overnight,scheduled,FedEx,Pacific Fresh
+DEL-00172,55401,21201,2023-05-19,2023-05-22,2023-05-22,electronics,70.0,express,delivered,FedEx,National Supply Co
+DEL-00173,59601,48201,2023-04-12,2023-04-16,2023-04-16,live_plants,57.7,standard,delivered,DHL Express,ByteStream Hardware
+DEL-00174,19103,27601,2023-05-03,2023-05-06,,electronics,112.0,express,cancelled,FedEx,FreshDirect Farms
+DEL-00175,59601,80202,2023-05-20,2023-05-22,2023-05-25,electronics,43.2,express,delayed,UPS,Gallery Moderne
+DEL-00176,35203,03101,2023-04-25,2023-04-30,,live_plants,53.0,standard,cancelled,DHL Express,Delicate Touches
+DEL-00177,84101,95814,2023-05-17,2023-05-18,2023-05-19,standard,96.2,overnight,delivered,Amazon Logistics,SafeHaul Logistics
+DEL-00178,30301,82001,2023-04-29,2023-05-06,,electronics,35.8,standard,scheduled,USPS,NovaRx Distribution
+DEL-00179,33101,95814,2023-04-18,2023-04-21,2023-04-20,standard,119.8,standard,delivered,USPS,Studio Lumiere
+DEL-00180,46204,63101,2023-05-09,2023-05-12,2023-05-12,standard,17.6,express,delivered,UPS,Greenfield Organics
+DEL-00181,23219,98101,2023-05-14,2023-05-20,2023-05-23,fragile,72.8,standard,delayed,Amazon Logistics,Pinnacle Pharma
+DEL-00182,68102,93101,2023-04-18,2023-04-22,,perishable,38.1,standard,cancelled,USPS,CircuitPeak Electronics
+DEL-00183,02101,97401,2023-04-17,2023-04-23,2023-04-24,pharmaceutical,31.8,standard,delivered,Amazon Logistics,Artisan Glass Co
+DEL-00184,70112,95814,2023-04-29,2023-05-03,2023-05-07,hazmat,102.4,standard,delayed,FedEx,MegaMart Supply
+DEL-00185,07102,92101,2023-05-05,2023-05-06,2023-05-08,artwork,8.3,overnight,delayed,USPS,ByteStream Hardware
+DEL-00186,95814,96813,2023-04-13,2023-04-15,2023-04-15,hazmat,27.3,express,delivered,USPS,Evergreen Gardens
+DEL-00187,02101,43215,2023-04-06,2023-04-09,2023-04-08,standard,73.6,standard,delivered,Amazon Logistics,MegaMart Supply
+DEL-00188,96813,80202,2023-04-21,2023-04-23,,standard,15.5,express,in_transit,Amazon Logistics,TechVault Inc
+DEL-00189,89101,87101,2023-05-20,2023-05-21,,electronics,70.7,overnight,in_transit,Amazon Logistics,Pacific Fresh
+DEL-00190,06103,04101,2023-04-15,2023-04-20,2023-04-25,standard,112.2,standard,delayed,UPS,FreshDirect Farms
+DEL-00191,70112,07102,2023-04-20,2023-04-22,,electronics,15.5,express,in_transit,Amazon Logistics,SafeHaul Logistics
+DEL-00192,33101,88001,2023-04-22,2023-04-29,2023-04-29,artwork,108.3,standard,delivered,Amazon Logistics,Delicate Touches
+DEL-00193,07102,19103,2023-05-07,2023-05-10,,artwork,25.7,express,in_transit,USPS,Pacific Fresh
+DEL-00194,02101,85001,2023-05-22,2023-05-28,2023-05-28,hazmat,29.8,standard,delivered,USPS,SubZero Provisions
+DEL-00195,92101,06103,2023-04-10,2023-04-15,2023-04-18,pharmaceutical,41.2,standard,delayed,DHL Express,Bloom & Grow Nursery
+DEL-00196,96813,55401,2023-04-21,2023-04-25,,artwork,67.6,standard,in_transit,USPS,Evergreen Gardens
+DEL-00197,35203,50309,2023-04-27,2023-05-01,,electronics,103.8,standard,cancelled,USPS,CircuitPeak Electronics
+DEL-00198,33101,48201,2023-05-03,2023-05-06,,artwork,19.5,express,in_transit,UPS,National Supply Co
+DEL-00199,27601,85001,2023-04-14,2023-04-15,2023-04-15,perishable,116.0,overnight,delivered,Amazon Logistics,BulkBuy Wholesale
+DEL-00200,84101,81501,2023-05-25,2023-05-27,,hazmat,64.6,express,in_transit,DHL Express,Gallery Moderne
+DEL-00201,29401,99501,2023-05-06,2023-05-10,2023-05-10,fragile,6.6,standard,delivered,FedEx,CircuitPeak Electronics
+DEL-00202,21201,46204,2023-05-14,2023-05-16,2023-05-16,standard,118.7,express,delivered,USPS,Botanica Direct
+DEL-00203,46204,63101,2023-05-09,2023-05-16,,live_plants,17.7,standard,in_transit,USPS,National Supply Co
+DEL-00204,19103,06103,2023-05-09,2023-05-11,2023-05-12,perishable,55.1,express,delivered,DHL Express,Evergreen Gardens
+DEL-00205,60601,33101,2023-05-24,2023-05-27,,fragile,40.7,express,scheduled,USPS,HazSafe Transport
+DEL-00206,27601,84101,2023-05-21,2023-05-24,,live_plants,70.3,standard,in_transit,FedEx,Crystal Clear Imports
+DEL-00207,29401,98101,2023-05-08,2023-05-11,2023-05-10,live_plants,86.7,express,delivered,Amazon Logistics,ChemCore Solutions
+DEL-00208,96813,81501,2023-05-15,2023-05-18,2023-05-18,live_plants,68.9,standard,delivered,UPS,Pinnacle Pharma
+DEL-00209,60601,44113,2023-05-29,2023-06-01,2023-06-02,pharmaceutical,93.1,express,delayed,DHL Express,Evergreen Gardens
+DEL-00210,95814,04101,2023-04-12,2023-04-15,2023-04-18,standard,45.5,express,delayed,DHL Express,Evergreen Gardens
+DEL-00211,59601,55401,2023-04-16,2023-04-17,,standard,58.4,overnight,in_transit,USPS,Studio Lumiere
+DEL-00212,32801,60601,2023-05-06,2023-05-09,2023-05-10,live_plants,57.8,express,delivered,DHL Express,FreshDirect Farms
+DEL-00213,89101,59601,2023-04-19,2023-04-20,2023-04-19,fragile,96.7,overnight,delivered,USPS,National Supply Co
+DEL-00214,07102,63101,2023-05-05,2023-05-08,2023-05-11,hazmat,24.6,express,delayed,DHL Express,Bloom & Grow Nursery
+DEL-00215,04101,01201,2023-05-04,2023-05-06,,standard,80.5,express,in_transit,UPS,Pinnacle Pharma
+DEL-00216,06103,03101,2023-04-01,2023-04-03,,fragile,92.6,express,in_transit,FedEx,NovaRx Distribution
+DEL-00217,80202,84101,2023-04-04,2023-04-06,,standard,34.6,express,scheduled,USPS,FreshDirect Farms
+DEL-00218,32801,82001,2023-04-27,2023-04-28,2023-04-29,frozen,110.6,overnight,delayed,FedEx,Heritage Art Movers
+DEL-00219,46204,85001,2023-04-20,2023-04-22,2023-04-25,pharmaceutical,5.0,express,delayed,USPS,SecureShip Hazmat
+DEL-00220,70112,80202,2023-05-25,2023-06-01,,artwork,112.7,standard,in_transit,DHL Express,SecureShip Hazmat
+DEL-00221,28202,03101,2023-05-18,2023-05-21,,electronics,22.8,express,scheduled,USPS,ByteStream Hardware
+DEL-00222,83702,92101,2023-04-21,2023-04-24,,frozen,51.6,standard,in_transit,DHL Express,Botanica Direct
+DEL-00223,01201,28202,2023-04-16,2023-04-22,,artwork,31.7,standard,scheduled,UPS,Greenfield Organics
+DEL-00224,48201,27601,2023-04-16,2023-04-18,,standard,43.5,express,scheduled,USPS,Pacific Fresh
+DEL-00225,50309,27601,2023-05-29,2023-06-01,2023-06-01,pharmaceutical,14.5,express,delivered,USPS,ByteStream Hardware
+DEL-00226,32801,04101,2023-05-06,2023-05-12,,standard,50.2,standard,scheduled,Amazon Logistics,MediQuick Labs
+DEL-00227,98101,37201,2023-05-04,2023-05-07,,live_plants,94.6,express,in_transit,Amazon Logistics,Allied Chemical Corp
+DEL-00228,63101,21201,2023-05-07,2023-05-14,2023-05-14,hazmat,60.9,standard,delivered,Amazon Logistics,SecureShip Hazmat
+DEL-00229,87101,68102,2023-05-03,2023-05-09,,perishable,11.4,standard,scheduled,Amazon Logistics,SubZero Provisions
+DEL-00230,50309,04101,2023-05-22,2023-05-27,,standard,55.8,standard,scheduled,FedEx,Precision Chemicals
+DEL-00231,46204,29401,2023-04-23,2023-04-25,,live_plants,5.9,express,in_transit,Amazon Logistics,TechVault Inc
+DEL-00232,06103,07102,2023-04-09,2023-04-15,2023-04-15,artwork,22.0,standard,delivered,USPS,Crystal Clear Imports
+DEL-00233,68102,43215,2023-04-23,2023-04-25,2023-04-26,fragile,78.6,express,delivered,Amazon Logistics,MegaMart Supply
+DEL-00234,46204,59601,2023-04-20,2023-04-21,,pharmaceutical,3.2,overnight,scheduled,FedEx,National Supply Co
+DEL-00235,59601,44113,2023-04-18,2023-04-20,2023-04-21,standard,41.9,express,delayed,UPS,BulkBuy Wholesale
+DEL-00236,19103,89101,2023-04-07,2023-04-09,,fragile,25.1,express,in_transit,FedEx,ChemCore Solutions
+DEL-00237,89101,96813,2023-05-05,2023-05-09,,chemical,53.0,standard,scheduled,FedEx,CircuitPeak Electronics
+DEL-00238,93101,06103,2023-05-07,2023-05-08,,pharmaceutical,110.0,overnight,in_transit,UPS,Botanica Direct
+DEL-00239,93101,89101,2023-04-27,2023-05-02,2023-05-03,live_plants,62.8,standard,delivered,UPS,NovaRx Distribution
+DEL-00240,97201,97401,2023-04-23,2023-04-26,,hazmat,59.7,express,scheduled,DHL Express,Precision Chemicals
+DEL-00241,60601,95814,2023-05-01,2023-05-05,,fragile,90.7,standard,scheduled,DHL Express,FrostBite Foods
+DEL-00242,27601,96813,2023-04-27,2023-05-04,,pharmaceutical,49.8,standard,in_transit,FedEx,Precision Chemicals
+DEL-00243,43215,23219,2023-04-24,2023-04-27,,electronics,54.2,standard,in_transit,FedEx,Heritage Art Movers
+DEL-00244,28202,06103,2023-04-13,2023-04-15,,electronics,104.9,express,in_transit,Amazon Logistics,Pinnacle Pharma
+DEL-00245,48201,27601,2023-05-19,2023-05-25,2023-05-30,artwork,14.5,standard,delayed,UPS,Delicate Touches
+DEL-00246,95814,37201,2023-04-30,2023-05-07,,fragile,34.3,standard,in_transit,USPS,National Supply Co
+DEL-00247,27601,29401,2023-05-17,2023-05-18,,fragile,96.4,overnight,scheduled,DHL Express,Artisan Glass Co
+DEL-00248,60601,37201,2023-04-10,2023-04-13,2023-04-14,fragile,26.9,standard,delivered,Amazon Logistics,Allied Chemical Corp
+DEL-00249,97201,99501,2023-05-24,2023-05-28,,fragile,45.9,standard,in_transit,USPS,ChemCore Solutions
+DEL-00250,94102,92101,2023-05-02,2023-05-05,2023-05-05,electronics,77.2,express,delivered,DHL Express,Delicate Touches
+DEL-00251,33101,04101,2023-05-04,2023-05-07,,frozen,114.9,standard,scheduled,Amazon Logistics,Pacific Fresh
+DEL-00252,21201,89101,2023-04-05,2023-04-09,2023-04-10,perishable,75.9,standard,delivered,UPS,Botanica Direct
+DEL-00253,50309,63101,2023-05-02,2023-05-04,2023-05-05,perishable,58.2,express,delivered,Amazon Logistics,Heritage Art Movers
+DEL-00254,53202,10001,2023-05-23,2023-05-26,,perishable,2.5,express,scheduled,Amazon Logistics,Gallery Moderne
+DEL-00255,30301,01201,2023-04-17,2023-04-22,2023-04-22,hazmat,74.6,standard,delivered,UPS,Bloom & Grow Nursery
+DEL-00256,07102,43215,2023-05-14,2023-05-17,,artwork,27.5,standard,scheduled,UPS,ByteStream Hardware
+DEL-00257,94102,93101,2023-05-11,2023-05-14,,perishable,57.4,standard,scheduled,DHL Express,Precision Chemicals
+DEL-00258,07102,85001,2023-04-07,2023-04-09,2023-04-08,chemical,117.3,express,delivered,USPS,HazSafe Transport
+DEL-00259,83702,80202,2023-05-13,2023-05-14,2023-05-14,electronics,65.4,overnight,delivered,USPS,SecureShip Hazmat
+DEL-00260,02101,32801,2023-04-11,2023-04-13,,standard,9.7,express,in_transit,DHL Express,Heritage Art Movers
+DEL-00261,43215,92101,2023-05-17,2023-05-20,,hazmat,118.6,standard,in_transit,UPS,Glacier Cold Chain
+DEL-00262,55401,06103,2023-05-10,2023-05-17,2023-05-17,perishable,72.8,standard,delivered,FedEx,FreshDirect Farms
+DEL-00263,02101,94102,2023-05-31,2023-06-01,,electronics,43.0,overnight,in_transit,DHL Express,ChemCore Solutions
+DEL-00264,89101,97201,2023-05-16,2023-05-19,2023-05-19,standard,95.9,standard,delivered,Amazon Logistics,Gallery Moderne
+DEL-00265,43215,96813,2023-04-06,2023-04-09,2023-04-13,live_plants,43.6,standard,delayed,DHL Express,FreshDirect Farms
+DEL-00266,63101,93101,2023-05-06,2023-05-13,,electronics,54.1,standard,in_transit,UPS,Crystal Clear Imports
+DEL-00267,02101,01201,2023-04-25,2023-04-28,2023-04-28,fragile,39.3,standard,delivered,Amazon Logistics,Glacier Cold Chain
+DEL-00268,93101,07102,2023-05-14,2023-05-17,2023-05-17,frozen,62.8,express,delivered,UPS,HazSafe Transport
+DEL-00269,27601,35203,2023-05-01,2023-05-04,2023-05-04,standard,50.8,standard,delivered,DHL Express,SafeHaul Logistics
+DEL-00270,96813,90001,2023-04-01,2023-04-04,2023-04-05,standard,16.7,express,delivered,DHL Express,Artisan Glass Co
+DEL-00271,43215,48201,2023-05-09,2023-05-13,,standard,36.4,standard,in_transit,Amazon Logistics,MegaMart Supply
+DEL-00272,30301,53202,2023-04-21,2023-04-27,2023-04-27,artwork,93.9,standard,delivered,DHL Express,HazSafe Transport
+DEL-00273,63101,03101,2023-05-06,2023-05-09,,artwork,82.0,standard,cancelled,Amazon Logistics,FrostBite Foods
+DEL-00274,50309,96813,2023-05-21,2023-05-24,,electronics,101.8,express,scheduled,FedEx,Botanica Direct
+DEL-00275,04101,94102,2023-04-25,2023-04-28,,electronics,51.1,standard,in_transit,UPS,ByteStream Hardware
+DEL-00276,88001,80202,2023-04-24,2023-05-01,,standard,4.9,standard,in_transit,DHL Express,Precision Chemicals
+DEL-00277,07102,03101,2023-04-03,2023-04-06,,live_plants,77.8,express,cancelled,USPS,FrostBite Foods
+DEL-00278,48201,68102,2023-05-06,2023-05-13,,perishable,89.7,standard,scheduled,UPS,Evergreen Gardens
+DEL-00279,32801,50309,2023-04-23,2023-04-26,,fragile,60.3,standard,in_transit,Amazon Logistics,ByteStream Hardware
+DEL-00280,70112,44113,2023-04-30,2023-05-04,,hazmat,37.8,standard,in_transit,UPS,MediQuick Labs
+DEL-00281,55401,84101,2023-04-03,2023-04-05,2023-04-05,perishable,8.5,express,delivered,DHL Express,FreshDirect Farms
+DEL-00282,94102,01201,2023-04-11,2023-04-16,,standard,21.3,standard,in_transit,UPS,Evergreen Gardens
+DEL-00283,50309,32801,2023-04-26,2023-04-28,,live_plants,79.0,express,scheduled,UPS,Pacific Fresh
+DEL-00284,28202,50309,2023-05-16,2023-05-19,,standard,33.8,standard,in_transit,UPS,Bloom & Grow Nursery
+DEL-00285,59601,30301,2023-05-02,2023-05-09,,fragile,80.6,standard,cancelled,FedEx,SafeHaul Logistics
+DEL-00286,60601,81501,2023-04-30,2023-05-07,2023-05-06,fragile,42.6,standard,delivered,FedEx,MediQuick Labs
+DEL-00287,95814,27601,2023-04-20,2023-04-22,2023-04-21,hazmat,14.6,express,delivered,UPS,FreshDirect Farms
+DEL-00288,12207,87101,2023-05-02,2023-05-04,,fragile,51.1,express,in_transit,Amazon Logistics,CircuitPeak Electronics
+DEL-00289,84101,70112,2023-04-23,2023-04-26,,pharmaceutical,6.9,standard,in_transit,DHL Express,Studio Lumiere
+DEL-00290,28202,46204,2023-04-27,2023-05-03,,artwork,82.3,standard,in_transit,DHL Express,Crystal Clear Imports
+DEL-00291,07102,97201,2023-05-05,2023-05-08,2023-05-08,perishable,33.3,express,delivered,USPS,Pinnacle Pharma
+DEL-00292,83702,97401,2023-04-18,2023-04-25,,live_plants,68.9,standard,scheduled,Amazon Logistics,Artisan Glass Co
+DEL-00293,63101,82001,2023-04-28,2023-05-01,,chemical,26.6,standard,scheduled,DHL Express,Precision Chemicals
+DEL-00294,94102,93101,2023-05-26,2023-05-27,,electronics,31.9,overnight,in_transit,FedEx,BulkBuy Wholesale
+DEL-00295,03101,29401,2023-05-11,2023-05-14,2023-05-14,electronics,85.4,express,delivered,USPS,Allied Chemical Corp
+DEL-00296,37201,32801,2023-04-11,2023-04-14,,live_plants,71.8,express,cancelled,Amazon Logistics,SafeHaul Logistics
+DEL-00297,70112,27601,2023-04-07,2023-04-08,,standard,81.7,overnight,cancelled,Amazon Logistics,SecureShip Hazmat
+DEL-00298,53202,06103,2023-04-16,2023-04-17,,artwork,104.0,overnight,scheduled,UPS,ByteStream Hardware
+DEL-00299,23219,93101,2023-05-11,2023-05-17,2023-05-17,chemical,76.1,standard,delivered,UPS,HazSafe Transport
+DEL-00300,90001,07102,2023-04-21,2023-04-23,2023-04-24,fragile,114.1,express,delayed,USPS,BulkBuy Wholesale

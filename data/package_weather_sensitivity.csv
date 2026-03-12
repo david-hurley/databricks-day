@@ -1,0 +1,11 @@
+package_type,max_temperature,min_temperature,max_wind_gust,max_precipitation_probability,max_snow_probability,max_ice_probability,humidity_relative_max,sensitivity_notes
+perishable,85,32,60,80,70,50,85,Temperature-sensitive food items; spoilage risk in extreme heat or freezing
+pharmaceutical,77,36,55,70,60,40,80,Medications require controlled temperature range; efficacy degrades outside bounds
+electronics,95,14,50,65,60,45,75,Moisture and condensation risk; static-sensitive components
+fragile,100,10,35,55,50,40,90,High wind gusts risk physical damage during transport and handling
+standard,110,-10,65,90,85,70,95,General goods with minimal weather sensitivity
+frozen,55,-20,60,80,80,60,90,Must remain frozen; critical temperature ceiling to prevent thaw
+live_plants,90,38,40,60,30,20,85,Frost and ice are lethal; wind damages foliage during open-air transport
+chemical,95,15,45,50,50,35,70,Extreme cold causes crystallization; moisture risks container corrosion
+hazmat,90,5,40,45,40,30,75,Regulatory restrictions in severe weather; spill risk amplified by ice and wind
+artwork,80,40,30,35,25,20,60,Highly sensitive to humidity and moisture; physical shock from wind
