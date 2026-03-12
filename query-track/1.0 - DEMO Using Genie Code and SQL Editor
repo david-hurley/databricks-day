@@ -1,0 +1,13 @@
+Approach
+1. 
+
+
+Question Flow for Genie Code:
+- "What is in this table?"
+- "Show only data between April 25 and 30 2023"
+- "What AI SQL functions can I use?"
+- "Use ai_extract() - create a new column for weather_condition and bucket into precipitation_type, sky_condition, solar_intensity - only run on 10 rows"
+- "Start a new query - join my weather data to my station location"
+- "With my joined table, create a monthly climate summary of temperature and wind speed"
+- "What geospatial SQL functions do I have?"
+- "I want to filter my dataset for stations within 200km of Seattle (47.6061° N, 122.3328° W) , use the climate summary dataset and spatial sql functions to do this"
