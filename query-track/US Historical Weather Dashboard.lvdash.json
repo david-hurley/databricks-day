@@ -1,0 +1,593 @@
+{
+  "datasets": [
+    {
+      "name": "summary_kpis",
+      "displayName": "Summary KPIs",
+      "queryLines": [
+        "SELECT COUNT(*) as total_observations, COUNT(DISTINCT POSTAL_CODE) as unique_locations, ROUND(AVG(temperature_avg), 1) as avg_temp, ROUND(AVG(precipitation_probability), 1) as avg_precip_prob, ROUND(AVG(humidity_relative_avg), 1) as avg_humidity, ROUND(AVG(wind_speed_avg), 1) as avg_wind FROM classic_stable_been2c_catalog.weather.us_postal_daily_metric"
+      ]
+    },
+    {
+      "name": "daily_trends",
+      "displayName": "Daily Trends",
+      "queryLines": [
+        "SELECT date, ROUND(AVG(temperature_avg), 1) as avg_temp, ROUND(AVG(temperature_max), 1) as avg_high, ROUND(AVG(temperature_min), 1) as avg_low, ROUND(AVG(precipitation_probability), 1) as avg_precip_prob, ROUND(AVG(humidity_relative_avg), 1) as avg_humidity, ROUND(AVG(wind_speed_avg), 1) as avg_wind_speed FROM classic_stable_been2c_catalog.weather.us_postal_daily_metric GROUP BY date ORDER BY date"
+      ]
+    },
+    {
+      "name": "weather_conditions",
+      "displayName": "Weather Conditions",
+      "queryLines": [
+        "SELECT phrase_short as weather_condition, COUNT(*) as observation_count FROM classic_stable_been2c_catalog.weather.us_postal_daily_metric WHERE phrase_short IS NOT NULL GROUP BY phrase_short ORDER BY observation_count DESC LIMIT 8"
+      ]
+    },
+    {
+      "name": "map_data",
+      "displayName": "Temperature Map Data",
+      "queryLines": [
+        "SELECT ROUND(latitude, 0) as latitude, ROUND(longitude, 0) as longitude, ROUND(AVG(temperature_avg), 1) as avg_temp, ROUND(AVG(precipitation_probability), 1) as avg_precip_prob, COUNT(*) as obs_count FROM classic_stable_been2c_catalog.weather.us_postal_daily_metric WHERE date = (SELECT MAX(date) FROM classic_stable_been2c_catalog.weather.us_postal_daily_metric) GROUP BY ROUND(latitude, 0), ROUND(longitude, 0) HAVING COUNT(*) > 20 ORDER BY obs_count DESC"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "overview",
+      "displayName": "Weather Overview",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## US Historical Weather Dashboard"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Daily weather metrics across US postal codes (Apr 20 - May 5, 2023)"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-total-obs",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "summary_kpis",
+                  "fields": [
+                    {
+                      "name": "total_observations",
+                      "expression": "`total_observations`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "total_observations",
+                  "displayName": "Total Observations"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Total Observations"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-locations",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "summary_kpis",
+                  "fields": [
+                    {
+                      "name": "unique_locations",
+                      "expression": "`unique_locations`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "unique_locations",
+                  "displayName": "Unique Locations"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Unique Postal Codes"
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 2,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-avg-temp",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "summary_kpis",
+                  "fields": [
+                    {
+                      "name": "avg_temp",
+                      "expression": "`avg_temp`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "avg_temp",
+                  "displayName": "Avg Temperature (C)"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Avg Temperature (°C)"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 2,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "section-temp-trends",
+            "multilineTextboxSpec": {
+              "lines": [
+                "### Daily Temperature Trends"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "temp-trends-chart",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "daily_trends",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    },
+                    {
+                      "name": "avg_high",
+                      "expression": "`avg_high`"
+                    },
+                    {
+                      "name": "avg_temp",
+                      "expression": "`avg_temp`"
+                    },
+                    {
+                      "name": "avg_low",
+                      "expression": "`avg_low`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "date",
+                  "scale": {
+                    "type": "temporal"
+                  },
+                  "displayName": "Date"
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "avg_high",
+                      "displayName": "Avg High"
+                    },
+                    {
+                      "fieldName": "avg_temp",
+                      "displayName": "Avg Temp"
+                    },
+                    {
+                      "fieldName": "avg_low",
+                      "displayName": "Avg Low"
+                    }
+                  ]
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "National Avg Temperature (°C) — High / Avg / Low"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "section-precip",
+            "multilineTextboxSpec": {
+              "lines": [
+                "### Precipitation & Weather Conditions"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "precip-humidity-chart",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "daily_trends",
+                  "fields": [
+                    {
+                      "name": "date",
+                      "expression": "`date`"
+                    },
+                    {
+                      "name": "avg_precip_prob",
+                      "expression": "`avg_precip_prob`"
+                    },
+                    {
+                      "name": "avg_humidity",
+                      "expression": "`avg_humidity`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "date",
+                  "scale": {
+                    "type": "temporal"
+                  },
+                  "displayName": "Date"
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "avg_precip_prob",
+                      "displayName": "Precip Probability (%)"
+                    },
+                    {
+                      "fieldName": "avg_humidity",
+                      "displayName": "Humidity (%)"
+                    }
+                  ]
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Precipitation Probability & Humidity"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 13,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "weather-conditions-pie",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "weather_conditions",
+                  "fields": [
+                    {
+                      "name": "weather_condition",
+                      "expression": "`weather_condition`"
+                    },
+                    {
+                      "name": "observation_count",
+                      "expression": "`observation_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "observation_count",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Observations"
+                },
+                "color": {
+                  "fieldName": "weather_condition",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Condition"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Top Weather Conditions"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 13,
+            "width": 3,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "temperature-map",
+      "displayName": "Temperature Map",
+      "layout": [
+        {
+          "widget": {
+            "name": "map-title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Temperature Map"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "map-subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Average temperature by grid cell on the most recent day in the dataset"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "temperature-map-widget",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "map_data",
+                  "fields": [
+                    {
+                      "name": "avg_temp",
+                      "expression": "`avg_temp`"
+                    },
+                    {
+                      "name": "latitude",
+                      "expression": "`latitude`"
+                    },
+                    {
+                      "name": "longitude",
+                      "expression": "`longitude`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "mark": {
+                "size": -1.8
+              },
+              "widgetType": "symbol-map",
+              "encodings": {
+                "coordinates": {
+                  "latitude": {
+                    "fieldName": "latitude"
+                  },
+                  "longitude": {
+                    "fieldName": "longitude"
+                  }
+                },
+                "color": {
+                  "fieldName": "avg_temp",
+                  "scale": {
+                    "type": "quantitative",
+                    "colorRamp": {
+                      "mode": "scheme",
+                      "scheme": "reds"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "map-data-table",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "map_data",
+                  "fields": [
+                    {
+                      "name": "latitude",
+                      "expression": "`latitude`"
+                    },
+                    {
+                      "name": "longitude",
+                      "expression": "`longitude`"
+                    },
+                    {
+                      "name": "avg_temp",
+                      "expression": "`avg_temp`"
+                    },
+                    {
+                      "name": "avg_precip_prob",
+                      "expression": "`avg_precip_prob`"
+                    },
+                    {
+                      "name": "obs_count",
+                      "expression": "`obs_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "latitude",
+                    "displayName": "Latitude"
+                  },
+                  {
+                    "fieldName": "longitude",
+                    "displayName": "Longitude"
+                  },
+                  {
+                    "fieldName": "avg_temp",
+                    "displayName": "Avg Temp (°C)"
+                  },
+                  {
+                    "fieldName": "avg_precip_prob",
+                    "displayName": "Precip Prob (%)"
+                  },
+                  {
+                    "fieldName": "obs_count",
+                    "displayName": "Observations"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Location Detail"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 10,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ]
+}
